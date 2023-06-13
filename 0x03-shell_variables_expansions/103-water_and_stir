@@ -1,2 +1,2 @@
 #!/bin/bash
-result=$(printf "%d" "$(( 27#"$WATER" + 27#"$STIR" ))"); base_bestchol=""; while [ $result -gt 0 ]; do remainder=$(( result % 14 )); result=$(( result / 14 )); if [ $remainder -lt 10 ]; then base_bestchol="$remainder$base_bestchol"; else base_bestchol="$(printf '\\x%x' "$(( remainder + 87 ))")$base_bestchol"; fi; done; echo "$base_bestchol"
+WATER=$((WATER + STIR)) echo "$WATER"
